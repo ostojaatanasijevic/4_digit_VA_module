@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/ostoja/Elektronika/Projekti/4 digit VA module/4 digit VA module.kicad_sch</source>
-    <date>Fri Nov  3 15:13:34 2023</date>
+    <date>Sat Nov  4 13:05:59 2023</date>
     <tool>Eeschema 7.0.8</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -722,10 +722,10 @@
       <footprint>Package_SO:MSOP-10_3x3mm_P0.5mm</footprint>
       <datasheet>http://ww1.microchip.com/downloads/en/DeviceDoc/21700D.pdf</datasheet>
       <fields>
-        <field name="Price">1.3</field>
+        <field name="Price">1.63</field>
       </fields>
       <libsource lib="SPICE_ADC" part="MCP33151D-05" description="13-Bit Differential Input, Low Power A/D Converter with SPI Interface"/>
-      <property name="Price" value="1.3"/>
+      <property name="Price" value="1.63"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="4 digit VA module.kicad_sch"/>
       <property name="ki_description" value="13-Bit Differential Input, Low Power A/D Converter with SPI Interface"/>
@@ -781,22 +781,6 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamps>44696f85-787c-425d-b5df-512584861949</tstamps>
     </comp>
-    <comp ref="U6">
-      <value>SN74LV4052</value>
-      <footprint>Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</footprint>
-      <datasheet>http://www.ti.com/lit/ds/symlink/cd4052b.pdf</datasheet>
-      <fields>
-        <field name="Price">0.277</field>
-      </fields>
-      <libsource lib="SPICE_Analog_Switch" part="SN74LV4052" description="CMOS double 4-channel analog multiplexer/demultiplexer, TSSOP-16/DIP-16/SOIC-16"/>
-      <property name="Price" value="0.277"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="4 digit VA module.kicad_sch"/>
-      <property name="ki_description" value="CMOS double 4-channel analog multiplexer/demultiplexer, TSSOP-16/DIP-16/SOIC-16"/>
-      <property name="ki_keywords" value="analog switch selector multiplexer"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>3ded4c5e-998f-49cb-a2f7-c1e3bee01268</tstamps>
-    </comp>
     <comp ref="U7">
       <value>TLV07</value>
       <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
@@ -820,6 +804,22 @@
       <property name="ki_keywords" value="op amp operational amplifier"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>bcfd71bf-8e17-4a03-a1d4-b4666e787b43</tstamps>
+    </comp>
+    <comp ref="U8">
+      <value>74LVC1G3157</value>
+      <footprint>Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering</footprint>
+      <datasheet>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</datasheet>
+      <fields>
+        <field name="Price">0.23</field>
+      </fields>
+      <libsource lib="74xGxx" part="74LVC1G3157" description="SPDT Analog Switch, Low-Voltage CMOS"/>
+      <property name="Price" value="0.23"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="4 digit VA module.kicad_sch"/>
+      <property name="ki_description" value="SPDT Analog Switch, Low-Voltage CMOS"/>
+      <property name="ki_keywords" value="SPDT Analog Switch CMOS"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b07afc00-85ae-4976-aa9c-b9cf3d9b59a3 4a51a9b8-423c-4072-950f-51b675792d7b</tstamps>
     </comp>
     <comp ref="U9">
       <value>LM4040DBZ-2.5</value>
@@ -855,6 +855,27 @@
     </comp>
   </components>
   <libparts>
+    <libpart lib="74xGxx" part="74LVC1G3157">
+      <description>SPDT Analog Switch, Low-Voltage CMOS</description>
+      <docs>http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</docs>
+      <footprints>
+        <fp>SOT*</fp>
+        <fp>SC*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LVC1G3157</field>
+        <field name="Datasheet">http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="bidirectional"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="" type="bidirectional"/>
+        <pin num="4" name="" type="bidirectional"/>
+        <pin num="5" name="VCC" type="power_in"/>
+        <pin num="6" name="" type="input"/>
+      </pins>
+    </libpart>
     <libpart lib="Connector" part="Conn_01x02_Socket">
       <description>Generic connector, single row, 01x02, script generated</description>
       <docs>~</docs>
@@ -1063,41 +1084,6 @@
         <pin num="10" name="DVio" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="SPICE_Analog_Switch" part="SN74LV4052">
-      <description>CMOS double 4-channel analog multiplexer/demultiplexer, TSSOP-16/DIP-16/SOIC-16</description>
-      <docs>http://www.ti.com/lit/ds/symlink/cd4052b.pdf</docs>
-      <footprints>
-        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
-        <fp>DIP*W7.62*</fp>
-        <fp>SOIC*3.9x9.9mm*P1.27mm*</fp>
-        <fp>SO*5.3x10.2mm*P1.27mm*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">SN74LV4052</field>
-        <field name="Footprint">Package_SO:SOIC-16_3.9x9.9mm_P1.27mm</field>
-        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/cd4052b.pdf</field>
-        <field name="Price">0.277</field>
-      </fields>
-      <pins>
-        <pin num="1" name="Y0" type="bidirectional"/>
-        <pin num="2" name="Y2" type="bidirectional"/>
-        <pin num="3" name="Y" type="bidirectional"/>
-        <pin num="4" name="Y3" type="bidirectional"/>
-        <pin num="5" name="Y1" type="bidirectional"/>
-        <pin num="6" name="INH" type="input"/>
-        <pin num="7" name="GND" type="power_in"/>
-        <pin num="8" name="GND" type="power_in"/>
-        <pin num="9" name="B" type="input"/>
-        <pin num="10" name="A" type="input"/>
-        <pin num="11" name="X3" type="bidirectional"/>
-        <pin num="12" name="X0" type="bidirectional"/>
-        <pin num="13" name="X" type="bidirectional"/>
-        <pin num="14" name="X1" type="bidirectional"/>
-        <pin num="15" name="X2" type="bidirectional"/>
-        <pin num="16" name="VDD" type="power_in"/>
-      </pins>
-    </libpart>
     <libpart lib="SPICE_bjts" part="BC817">
       <description>0.8A Ic, 45V Vce, NPN Transistor, SOT-23</description>
       <docs>https://www.onsemi.com/pub/Collateral/BC818-D.pdf</docs>
@@ -1202,6 +1188,9 @@
     </libpart>
   </libparts>
   <libraries>
+    <library logical="74xGxx">
+      <uri>/usr/share/kicad/symbols//74xGxx.kicad_sym</uri>
+    </library>
     <library logical="Connector">
       <uri>/usr/share/kicad/symbols//Connector.kicad_sym</uri>
     </library>
@@ -1253,9 +1242,8 @@
       <node ref="U5" pin="35" pinfunction="VSS" pintype="passive"/>
       <node ref="U5" pin="47" pinfunction="VSS" pintype="passive"/>
       <node ref="U5" pin="8" pinfunction="VSSA" pintype="power_in"/>
-      <node ref="U6" pin="7" pinfunction="GND" pintype="power_in"/>
-      <node ref="U6" pin="8" pinfunction="GND" pintype="power_in"/>
       <node ref="U7" pin="4" pinfunction="V-" pintype="power_in"/>
+      <node ref="U8" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U9" pin="2" pinfunction="A" pintype="passive"/>
     </net>
     <net code="2" name="2.5V">
@@ -1275,9 +1263,8 @@
       <node ref="U5" pin="36" pinfunction="VDD" pintype="power_in"/>
       <node ref="U5" pin="48" pinfunction="VDD" pintype="power_in"/>
       <node ref="U5" pin="9" pinfunction="VDDA" pintype="power_in"/>
-      <node ref="U6" pin="16" pinfunction="VDD" pintype="power_in"/>
-      <node ref="U6" pin="6" pinfunction="INH" pintype="input"/>
       <node ref="U7" pin="7" pinfunction="V+" pintype="power_in"/>
+      <node ref="U8" pin="5" pinfunction="VCC" pintype="power_in"/>
     </net>
     <net code="4" name="A">
       <node ref="R10" pin="2" pintype="passive"/>
@@ -1361,15 +1348,10 @@
     </net>
     <net code="22" name="I_OUT">
       <node ref="U1" pin="1" pintype="output"/>
-      <node ref="U6" pin="11" pinfunction="X3" pintype="bidirectional"/>
-      <node ref="U6" pin="14" pinfunction="X1" pintype="bidirectional"/>
+      <node ref="U8" pin="1" pintype="bidirectional"/>
     </net>
     <net code="23" name="LEVEL_JUDGE">
-      <node ref="R15" pin="1" pintype="passive"/>
-      <node ref="R17" pin="2" pintype="passive"/>
       <node ref="U5" pin="10" pinfunction="PA0" pintype="bidirectional"/>
-      <node ref="U6" pin="2" pinfunction="Y2" pintype="bidirectional"/>
-      <node ref="U6" pin="4" pinfunction="Y3" pintype="bidirectional"/>
     </net>
     <net code="24" name="Net-(J4-Pin_2)">
       <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
@@ -1447,178 +1429,177 @@
       <node ref="R17" pin="1" pintype="passive"/>
       <node ref="R30" pin="2" pintype="passive"/>
     </net>
-    <net code="43" name="Net-(U2-IN+)">
-      <node ref="U2" pin="3" pinfunction="IN+" pintype="input"/>
-      <node ref="U6" pin="13" pinfunction="X" pintype="bidirectional"/>
+    <net code="43" name="Net-(R18-Pad2)">
+      <node ref="R18" pin="2" pintype="passive"/>
+      <node ref="R30" pin="1" pintype="passive"/>
     </net>
-    <net code="44" name="Net-(U3-DPX)">
+    <net code="44" name="Net-(U2-IN+)">
+      <node ref="U2" pin="3" pinfunction="IN+" pintype="input"/>
+      <node ref="U8" pin="4" pintype="bidirectional"/>
+    </net>
+    <net code="45" name="Net-(U3-DPX)">
       <node ref="R29" pin="1" pintype="passive"/>
       <node ref="U3" pin="3" pinfunction="DPX" pintype="input"/>
     </net>
-    <net code="45" name="Net-(U3-a)">
+    <net code="46" name="Net-(U3-a)">
       <node ref="R22" pin="1" pintype="passive"/>
       <node ref="U3" pin="11" pinfunction="a" pintype="input"/>
     </net>
-    <net code="46" name="Net-(U3-b)">
+    <net code="47" name="Net-(U3-b)">
       <node ref="R23" pin="1" pintype="passive"/>
       <node ref="U3" pin="7" pinfunction="b" pintype="input"/>
     </net>
-    <net code="47" name="Net-(U3-c)">
+    <net code="48" name="Net-(U3-c)">
       <node ref="R24" pin="1" pintype="passive"/>
       <node ref="U3" pin="4" pinfunction="c" pintype="input"/>
     </net>
-    <net code="48" name="Net-(U3-d)">
+    <net code="49" name="Net-(U3-d)">
       <node ref="R25" pin="1" pintype="passive"/>
       <node ref="U3" pin="2" pinfunction="d" pintype="input"/>
     </net>
-    <net code="49" name="Net-(U3-e)">
+    <net code="50" name="Net-(U3-e)">
       <node ref="R26" pin="1" pintype="passive"/>
       <node ref="U3" pin="1" pinfunction="e" pintype="input"/>
     </net>
-    <net code="50" name="Net-(U3-f)">
+    <net code="51" name="Net-(U3-f)">
       <node ref="R27" pin="1" pintype="passive"/>
       <node ref="U3" pin="10" pinfunction="f" pintype="input"/>
     </net>
-    <net code="51" name="Net-(U3-g)">
+    <net code="52" name="Net-(U3-g)">
       <node ref="R28" pin="1" pintype="passive"/>
       <node ref="U3" pin="5" pinfunction="g" pintype="input"/>
     </net>
-    <net code="52" name="Net-(U4-DPX)">
+    <net code="53" name="Net-(U4-DPX)">
       <node ref="R21" pin="1" pintype="passive"/>
       <node ref="U4" pin="3" pinfunction="DPX" pintype="input"/>
     </net>
-    <net code="53" name="Net-(U4-a)">
+    <net code="54" name="Net-(U4-a)">
       <node ref="R10" pin="1" pintype="passive"/>
       <node ref="U4" pin="11" pinfunction="a" pintype="input"/>
     </net>
-    <net code="54" name="Net-(U4-b)">
+    <net code="55" name="Net-(U4-b)">
       <node ref="R11" pin="1" pintype="passive"/>
       <node ref="U4" pin="7" pinfunction="b" pintype="input"/>
     </net>
-    <net code="55" name="Net-(U4-c)">
+    <net code="56" name="Net-(U4-c)">
       <node ref="R12" pin="1" pintype="passive"/>
       <node ref="U4" pin="4" pinfunction="c" pintype="input"/>
     </net>
-    <net code="56" name="Net-(U4-d)">
+    <net code="57" name="Net-(U4-d)">
       <node ref="R14" pin="1" pintype="passive"/>
       <node ref="U4" pin="2" pinfunction="d" pintype="input"/>
     </net>
-    <net code="57" name="Net-(U4-e)">
+    <net code="58" name="Net-(U4-e)">
       <node ref="R16" pin="1" pintype="passive"/>
       <node ref="U4" pin="1" pinfunction="e" pintype="input"/>
     </net>
-    <net code="58" name="Net-(U4-f)">
+    <net code="59" name="Net-(U4-f)">
       <node ref="R19" pin="1" pintype="passive"/>
       <node ref="U4" pin="10" pinfunction="f" pintype="input"/>
     </net>
-    <net code="59" name="Net-(U4-g)">
+    <net code="60" name="Net-(U4-g)">
       <node ref="R20" pin="1" pintype="passive"/>
       <node ref="U4" pin="5" pinfunction="g" pintype="input"/>
     </net>
-    <net code="60" name="Net-(U5-NRST)">
+    <net code="61" name="Net-(U5-NRST)">
       <node ref="C1" pin="2" pintype="passive"/>
       <node ref="U5" pin="7" pinfunction="NRST" pintype="input"/>
     </net>
-    <net code="61" name="Net-(U6-X0)">
-      <node ref="U6" pin="12" pinfunction="X0" pintype="bidirectional"/>
-      <node ref="U6" pin="15" pinfunction="X2" pintype="bidirectional"/>
+    <net code="62" name="Net-(U7-+)">
+      <node ref="R15" pin="1" pintype="passive"/>
+      <node ref="R17" pin="2" pintype="passive"/>
+      <node ref="U7" pin="3" pinfunction="+" pintype="input"/>
+    </net>
+    <net code="63" name="Net-(U7--)">
       <node ref="U7" pin="2" pinfunction="-" pintype="input"/>
       <node ref="U7" pin="6" pintype="output"/>
+      <node ref="U8" pin="3" pintype="bidirectional"/>
     </net>
-    <net code="62" name="Net-(U6-Y0)">
-      <node ref="R18" pin="2" pintype="passive"/>
-      <node ref="R30" pin="1" pintype="passive"/>
-      <node ref="U6" pin="1" pinfunction="Y0" pintype="bidirectional"/>
-      <node ref="U6" pin="5" pinfunction="Y1" pintype="bidirectional"/>
-    </net>
-    <net code="63" name="PSU">
+    <net code="64" name="PSU">
       <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="U10" pin="1" pinfunction="VIN" pintype="power_in"/>
     </net>
-    <net code="64" name="SPI_CLK">
+    <net code="65" name="SPI_CLK">
       <node ref="U2" pin="8" pinfunction="SCLK" pintype="input"/>
       <node ref="U5" pin="15" pinfunction="PA5" pintype="bidirectional"/>
     </net>
-    <net code="65" name="SPI_MISO">
+    <net code="66" name="SPI_MISO">
       <node ref="U2" pin="9" pinfunction="SDI" pintype="output"/>
       <node ref="U5" pin="16" pinfunction="PA6" pintype="bidirectional"/>
     </net>
-    <net code="66" name="SPI_MOSI">
+    <net code="67" name="SPI_MOSI">
       <node ref="U2" pin="7" pinfunction="SDO" pintype="input"/>
       <node ref="U5" pin="17" pinfunction="PA7" pintype="bidirectional"/>
     </net>
-    <net code="67" name="STATE">
+    <net code="68" name="STATE">
       <node ref="J7" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U5" pin="2" pinfunction="PC13" pintype="bidirectional"/>
     </net>
-    <net code="68" name="SWCLK">
+    <net code="69" name="SWCLK">
       <node ref="J6" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U5" pin="37" pinfunction="PA14" pintype="bidirectional"/>
     </net>
-    <net code="69" name="SWDIO">
+    <net code="70" name="SWDIO">
       <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="U5" pin="34" pinfunction="PA13" pintype="bidirectional"/>
     </net>
-    <net code="70" name="USART_RX">
+    <net code="71" name="USART_RX">
       <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U5" pin="13" pinfunction="PA3" pintype="bidirectional"/>
     </net>
-    <net code="71" name="USART_TX">
+    <net code="72" name="USART_TX">
       <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="U5" pin="12" pinfunction="PA2" pintype="bidirectional"/>
     </net>
-    <net code="72" name="VA_SEL">
+    <net code="73" name="VA_SEL">
       <node ref="U5" pin="45" pinfunction="PB8" pintype="bidirectional"/>
-      <node ref="U6" pin="10" pinfunction="A" pintype="input"/>
+      <node ref="U8" pin="6" pintype="input"/>
     </net>
-    <net code="73" name="V_IN_MUX">
+    <net code="74" name="V_IN_MUX">
       <node ref="U5" pin="21" pinfunction="PB10" pintype="bidirectional"/>
-      <node ref="U6" pin="3" pinfunction="Y" pintype="bidirectional"/>
-      <node ref="U7" pin="3" pinfunction="+" pintype="input"/>
     </net>
-    <net code="74" name="V_RANGE">
+    <net code="75" name="V_RANGE">
       <node ref="U5" pin="46" pinfunction="PB9" pintype="bidirectional"/>
-      <node ref="U6" pin="9" pinfunction="B" pintype="input"/>
     </net>
-    <net code="75" name="V_in_pos">
+    <net code="76" name="V_in_pos">
       <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R18" pin="1" pintype="passive"/>
     </net>
-    <net code="76" name="current_in_neg">
+    <net code="77" name="current_in_neg">
       <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
       <node ref="U1" pin="4" pinfunction="-" pintype="input"/>
     </net>
-    <net code="77" name="current_in_pos">
+    <net code="78" name="current_in_pos">
       <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="U1" pin="3" pinfunction="+" pintype="input"/>
     </net>
-    <net code="78" name="unconnected-(U5-PA1-Pad11)">
+    <net code="79" name="unconnected-(U5-PA1-Pad11)">
       <node ref="U5" pin="11" pinfunction="PA1" pintype="bidirectional"/>
     </net>
-    <net code="79" name="unconnected-(U5-PA12-Pad33)">
+    <net code="80" name="unconnected-(U5-PA12-Pad33)">
       <node ref="U5" pin="33" pinfunction="PA12" pintype="bidirectional"/>
     </net>
-    <net code="80" name="unconnected-(U5-PA15-Pad38)">
+    <net code="81" name="unconnected-(U5-PA15-Pad38)">
       <node ref="U5" pin="38" pinfunction="PA15" pintype="bidirectional"/>
     </net>
-    <net code="81" name="unconnected-(U5-PB11-Pad22)">
+    <net code="82" name="unconnected-(U5-PB11-Pad22)">
       <node ref="U5" pin="22" pinfunction="PB11" pintype="bidirectional"/>
     </net>
-    <net code="82" name="unconnected-(U5-PC14-Pad3)">
+    <net code="83" name="unconnected-(U5-PC14-Pad3)">
       <node ref="U5" pin="3" pinfunction="PC14" pintype="bidirectional"/>
     </net>
-    <net code="83" name="unconnected-(U5-PC15-Pad4)">
+    <net code="84" name="unconnected-(U5-PC15-Pad4)">
       <node ref="U5" pin="4" pinfunction="PC15" pintype="bidirectional"/>
     </net>
-    <net code="84" name="unconnected-(U5-PH0-Pad5)">
+    <net code="85" name="unconnected-(U5-PH0-Pad5)">
       <node ref="U5" pin="5" pinfunction="PH0" pintype="bidirectional"/>
     </net>
-    <net code="85" name="unconnected-(U5-PH1-Pad6)">
+    <net code="86" name="unconnected-(U5-PH1-Pad6)">
       <node ref="U5" pin="6" pinfunction="PH1" pintype="bidirectional"/>
     </net>
-    <net code="86" name="unconnected-(U10-NC-Pad4)">
+    <net code="87" name="unconnected-(U10-NC-Pad4)">
       <node ref="U10" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
   </nets>
